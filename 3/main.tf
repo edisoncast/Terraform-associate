@@ -19,7 +19,7 @@ resource "docker_container" "nginx" {
     name  = "terraform-nginx"
     ports {
         internal = 80
-        external = 81
+        external = var.external_port
         protocol = "tcp"
     }
 }
